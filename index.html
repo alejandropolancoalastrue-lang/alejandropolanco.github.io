@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pilar & Alejandro — Boda · 25 julio 2026 · Gijón</title>
+  <meta name="description" content="Información de la boda: ceremonia, celebración, transporte, alojamiento y confirmación de asistencia." />
+  <style>
+    :root{
+      --bg:#f4f1ea;
+      --ink:#1c2a2f;
+      --muted:#5a6a70;
+      --accent:#2b6a73;
+      --card:#ffffff;
+      --border: rgba(0,0,0,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      color:var(--ink);
+      background: radial-gradient(1200px 700px at 50% -200px, #ffffff 0%, var(--bg) 55%);
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(244,241,234,.86);
+      backdrop-filter:saturate(120%) blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+      min-width: 180px;
+    }
+    .monogram{
+      width:42px;height:42px;border-radius:12px;
+      display:grid;place-items:center;
+      border:1px solid var(--border);
+      background:#fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,.06);
+      font-weight:700; letter-spacing:.5px; color:var(--accent);
+    }
+    .brand strong{display:block;font-size:14px; letter-spacing:.4px}
+    .brand span{display:block;font-size:12px;color:var(--muted)}
+    nav{
+      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-size:13px;
+    }
+    nav a{
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      color:var(--muted);
+    }
+    nav a:hover{border-color:var(--border); background:#fff; color:var(--ink)}
+    .hero{
+      padding:56px 0 18px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .heroCard{
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:18px;
+    }
+    h1{
+      margin:0;
+      font-size:42px;
+      line-height:1.05;
+      letter-spacing:-.5px;
+    }
+    .sub{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.5;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .pillRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:10px 12px; border-radius:999px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .pill b{color:var(--ink); font-weight:600}
+    .aside{
+      padding:18px;
+      display:flex; flex-direction:column; gap:12px;
+    }
+    .aside .mini{
+      padding:16px;
+      border-radius:16px;
+      border:1px dashed rgba(43,106,115,.35);
+      background:linear-gradient(180deg, rgba(43,106,115,.08), rgba(255,255,255,.7));
+    }
+    .aside h3{margin:0 0 6px;font-size:16px}
+    .aside p{margin:0;color:var(--muted);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size:13px; line-height:1.45}
+    section{padding:34px 0}
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:10px; margin-bottom:14px;
+    }
+    .sectionTitle h2{
+      margin:0; font-size:26px;
+      letter-spacing:-.2px;
+    }
+    .sectionTitle small{
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .pad{padding:18px}
+    .k{color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size:13px}
+    .v{margin:6px 0 0; font-size:16px; line-height:1.4}
+    .list{
+      margin:10px 0 0;
+      padding:0 0 0 18px;
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.55;
+    }
+    .note{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    details{
+      border:1px solid var(--border);
+      border-radius:16px;
+      background:#fff;
+      box-shadow: 0 10px 28px rgba(0,0,0,.05);
+      overflow:hidden;
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      padding:14px 16px;
+      list-style:none;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight:600;
+    }
+    summary::-webkit-details-marker{display:none}
+    .detailsBody{padding:0 16px 16px}
+    .formGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    label{
+      display:block;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:13px;
+      color:var(--muted);
+      margin:0 0 6px;
+    }
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      font: inherit;
+      background:#fff;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(43,106,115,.35);
+      background: linear-gradient(180deg, rgba(43,106,115,.18), rgba(43,106,115,.10));
+      cursor:pointer;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight:650;
+    }
+    .btn:hover{filter:saturate(1.1)}
+    footer{
+      margin-top:26px;
+      border-top:1px solid var(--border);
+      background:rgba(43,106,115,.10);
+      padding:18px 0;
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:13px;
+    }
+    .footerRow{
+      display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap;
+      align-items:center;
+    }
+    .mutedLink{color:inherit; text-decoration:underline dotted rgba(0,0,0,.2)}
+    .hr{height:1px;background:var(--border);margin:12px 0}
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .formGrid{grid-template-columns:1fr}
+      h1{font-size:36px}
+      nav{justify-content:flex-start}
+      .brand{min-width:auto}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="Ir al inicio">
+        <div class="monogram">PA</div>
+        <div>
+          <strong>Pilar & Alejandro</strong>
+          <span>25 julio 2026 · Gijón</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="#home">Home</a>
+        <a href="#boda">Boda</a>
+        <a href="#info">Información</a>
+        <a href="#asturias">Asturias</a>
+        <a href="#rsvp">Confirmación</a>
+        <a href="#lista">Lista</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="heroGrid">
+      <div class="card heroCard">
+        <div>
+          <h1>Nos casamos</h1>
+          <p class="sub">
+            Nos encantará celebrarlo contigo. Aquí tienes toda la información del fin de semana
+            (ceremonia, celebración, transporte, alojamiento y recomendaciones).
+          </p>
+          <div class="pillRow" role="list">
+            <div class="pill" role="listitem">📅 <b>25</b> julio <b>2026</b></div>
+            <div class="pill" role="listitem">📍 <b>Gijón</b></div>
+            <div class="pill" role="listitem">🕠 Ceremonia <b>17:30</b></div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div>
+          <div class="k">Organización de la boda</div>
+          <div class="v">
+            <a class="mutedLink" href="mailto:info@pilaryalejandro.es">info@pilaryalejandro.es</a><br/>
+            <a class="mutedLink" href="tel:+34692158450">+34 692 158 450</a>
+          </div>
+          <div class="note">*(Si cambias estos datos, actualízalos también en el pie de página.)*</div>
+        </div>
+      </div>
+
+      <aside class="card aside" aria-label="Resumen rápido">
+        <div class="mini">
+          <h3>Ceremonia</h3>
+          <p>Iglesia de San Julián de Somió, Gijón<br><b>Sábado, 25/07/2026 · 17:30</b></p>
+        </div>
+        <div class="mini">
+          <h3>Celebración</h3>
+          <p>La Concepción, Gijón</p>
+          <p class="note"><b>Etiqueta:</b> Formal · Hombres: traje oscuro con corbata · Mujeres: largo o midi (si es sin mangas, recomendamos cubrir hombros en la misa)</p>
+        </div>
+        <div class="mini">
+          <h3>Preboda</h3>
+          <p>El viernes: fiesta preboda (detalles por WhatsApp).</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- BODA -->
+  <section id="boda">
+    <div class="sectionTitle">
+      <h2>Boda</h2>
+      <small>Horarios y lugares</small>
+    </div>
+
+    <div class="grid2">
+      <div class="card pad">
+        <div class="k">Ceremonia</div>
+        <div class="v"><b>Iglesia de San Julián de Somió, Gijón</b></div>
+        <div class="note">Sábado, 25 de julio de 2026 a las 17:30</div>
+      </div>
+
+      <div class="card pad">
+        <div class="k">Celebración</div>
+        <div class="v"><b>La Concepción, Gijón</b></div>
+        <div class="note">
+          <b>Etiqueta:</b> Formal<br>
+          <b>Hombres:</b> Traje oscuro con corbata<br>
+          <b>Mujeres:</b> Traje largo o midi<br>
+          <em>Si el traje no tiene mangas, recomendamos llevar una prenda que cubra los hombros para la misa.</em>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:12px"></div>
+
+    <div class="card pad">
+      <div class="k">Preboda</div>
+      <div class="v">El viernes organizaremos una fiesta preboda pensada especialmente para los invitados más jóvenes.</div>
+      <div class="note">Más adelante compartiremos los detalles a través de WhatsApp.</div>
+    </div>
+  </section>
+
+  <!-- INFORMACIÓN -->
+  <section id="info">
+    <div class="sectionTitle">
+      <h2>Información</h2>
+      <small>Alojamiento · Peluquería · Transporte · Babysitting</small>
+    </div>
+
+    <details open>
+      <summary>🏨 Alojamiento (tarifas negociadas)</summary>
+      <div class="detailsBody">
+        <p class="note">
+          El fin de semana coincide con temporada alta en Gijón y el domingo por la mañana se celebra el Festival Aéreo en la Playa de San Lorenzo.
+          Recomendamos reservar lo antes posible.
+        </p>
+
+        <div class="grid3">
+          <div class="card pad" style="box-shadow:none">
+            <div class="k">Hotel NH</div>
+            <div class="v">Precio: <b>210€ / noche</b></div>
+            <div class="note">Reservas: <a class="mutedLink" href="mailto:nhgijon@nh-hotels.com">nhgijon@nh-hotels.com</a></div>
+          </div>
+          <div class="card pad" style="box-shadow:none">
+            <div class="k">Hotel ABBA</div>
+            <div class="v">Código: <b>PILALE26</b></div>
+            <div class="note">Descuento: <b>15%</b> (reservas vía web del hotel)</div>
+          </div>
+          <div class="card pad" style="box-shadow:none">
+            <div class="k">Hotel Zentro Rey Pelayo</div>
+            <div class="v">Código: <b>BODA PIAL2026</b></div>
+            <div class="note">Reservas vía web del hotel</div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="k">Otros hoteles (sin tarifa negociada)</div>
+        <ul class="list">
+          <li>Hotel Moderne</li>
+          <li>Hotel ARTIEM</li>
+          <li>Blue Hoteles</li>
+          <li>Hotel Príncipe de Asturias</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>💇 Peluquería (recomendaciones)</summary>
+      <div class="detailsBody">
+        <ul class="list">
+          <li>Alonsos</li>
+          <li>Llongueras</li>
+          <li>Suárez</li>
+          <li>Jana Tagarro</li>
+          <li>La Salá</li>
+          <li>La Mona Riza</li>
+          <li>Coco y Limón</li>
+          <li>Patricia Solar</li>
+          <li>Gerclem</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>🚌 Transporte (autobuses)</summary>
+      <div class="detailsBody">
+        <div class="k">Puntos de recogida (día de la boda)</div>
+        <ul class="list">
+          <li>Hotel NH / ABBA: <b>17:00</b></li>
+          <li>Puerto deportivo de Gijón: <b>17:00</b></li>
+          <li>Parador de Gijón: <b>17:00</b></li>
+        </ul>
+        <p class="note"><b>Rogamos puntualidad.</b></p>
+
+        <div class="k">Regresos desde La Concepción</div>
+        <ul class="list">
+          <li><b>12:30</b></li>
+          <li><b>2:00</b></li>
+          <li><b>3:30</b></li>
+          <li><b>5:00</b> (fin de fiesta)</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>🧸 Babysitting</summary>
+      <div class="detailsBody">
+        <p class="note">
+          Para quienes viajéis a Gijón con niños, recomendamos una empresa especializada:
+        </p>
+        <div class="card pad" style="box-shadow:none">
+          <div class="k">Empresa</div>
+          <div class="v"><b>Sueños de Papel</b></div>
+        </div>
+      </div>
+    </details>
+
+  </section>
+
+  <!-- ASTURIAS -->
+  <section id="asturias">
+    <div class="sectionTitle">
+      <h2>Asturias</h2>
+      <small>Recomendaciones</small>
+    </div>
+
+    <div class="grid2">
+      <div class="card pad">
+        <div class="k">Gijón — Dónde comer (restaurantes formales)</div>
+        <ul class="list">
+          <li>La Pondala (roast beef / arroz con almejas / arroz con pollo)</li>
+          <li>Casa Zabala</li>
+          <li>Auga</li>
+          <li>El Recetario</li>
+          <li>Sancho (mollejas)</li>
+          <li>Gloria (arroz con pitu de caleya)</li>
+          <li>Viñao</li>
+          <li>Farragua</li>
+        </ul>
+      </div>
+
+      <div class="card pad">
+        <div class="k">Asturias — Dónde comer</div>
+        <ul class="list">
+          <li><b>Con estrella Michelin:</b>
+            <ul class="list">
+              <li>Casa Marcial (Arriondas)</li>
+              <li>Casa Gerardo (Prendes) — fabada</li>
+              <li>Balneario de Salinas (Salinas)</li>
+            </ul>
+          </li>
+          <li><b>Otros:</b>
+            <ul class="list">
+              <li>Gueyu Mar (Ribadesella)</li>
+              <li>La Huertona (Ribadesella)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="height:12px"></div>
+
+    <div class="card pad">
+      <div class="k">Mapa</div>
+      <p class="note">
+        Si quieres “clavar” el mapa con marcadores como en el ejemplo, lo más fácil es:
+        crear un mapa en Google My Maps y pegar aquí el iframe de “Compartir → Insertar en mi sitio”.
+      </p>
+
+      <!-- Sustituye el src por tu mapa embebido -->
+      <iframe
+        title="Mapa"
+        src=""
+        style="width:100%;height:360px;border:1px solid var(--border);border-radius:16px;background:#fff"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+      <p class="note">*(Ahora mismo el iframe está vacío a propósito. Pega tu enlace y listo.)*</p>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <div class="sectionTitle">
+      <h2>Confirmación de asistencia</h2>
+      <small>RSVP</small>
+    </div>
+
+    <div class="card pad">
+      <p class="note">
+        Este formulario funciona sin servidor si lo conectas a un servicio gratuito tipo <b>Formspree</b> o si lo sustituyes por un Google Form.
+        Aquí lo dejo preparado para Formspree (solo cambia el <code>action</code>).
+      </p>
+
+      <!-- 1) Crea un form en https://formspree.io (gratis) -->
+      <!-- 2) Te dan una URL y la pegas en action="" -->
+      <form id="rsvpForm" method="POST" action="">
+        <div class="formGrid">
+          <div>
+            <label for="asistencia">Asistirán</label>
+            <select id="asistencia" name="asistencia" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>Sí</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div>
+            <label for="numPersonas">Número de personas</label>
+            <input id="numPersonas" name="numPersonas" type="number" min="1" placeholder="Ej. 2" />
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="nombres">Nombres completos</label>
+            <input id="nombres" name="nombres" placeholder="Nombre y apellidos" required />
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="alergias">Alergias o intolerancias</label>
+            <input id="alergias" name="alergias" placeholder="Ej. frutos secos, celiaquía…" />
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="transporte">Transporte (ida y vuelta a Gijón)</label>
+            <select id="transporte" name="transporte">
+              <option value="" selected disabled>Selecciona…</option>
+              <option>NH / ABBA</option>
+              <option>Parador de Gijón</option>
+              <option>Puerto de Gijón (Letronas)</option>
+              <option>No, me desplazo / nos desplazamos en vehículo propio</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+          <div>
+            <label for="telefono">Número de teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+34…" />
+          </div>
+
+          <div style="grid-column: 1 / -1;">
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Cualquier cosa que debamos saber…"></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+          <button class="btn" type="submit">Enviar</button>
+          <span class="note" id="rsvpHint">Si no configuras el <code>action</code>, no enviará nada.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- LISTA -->
+  <section id="lista">
+    <div class="sectionTitle">
+      <h2>Lista de boda</h2>
+      <small>Opciones de detalle</small>
+    </div>
+
+    <div class="card pad">
+      <p class="note">Si deseáis tener un detalle con nosotros, aquí os dejamos algunas opciones. ¡Muchas gracias!</p>
+
+      <div class="grid2">
+        <div class="card pad" style="box-shadow:none">
+          <div class="k">Lista de bodas</div>
+          <div class="v"><b>El Corte Inglés</b></div>
+          <p class="note">Puedes añadir aquí un enlace directo a la lista.</p>
+        </div>
+
+        <div class="card pad" style="box-shadow:none">
+          <div class="k">Número de cuenta</div>
+          <div class="v"><b>ES00 0000 0000 0000 0000 0000</b></div>
+          <p class="note">*(Sustituye por el número real.)*</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footerRow">
+      <div>
+        Organización de la boda:
+        <a class="mutedLink" href="mailto:info@pilaryalejandro.es">info@pilaryalejandro.es</a>
+        · <a class="mutedLink" href="tel:+34692158450">+34 692 158 450</a>
+      </div>
+      <div>© Pilar & Alejandro · 25/07/2026</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Aviso amistoso si no has configurado Formspree / action
+  (function(){
+    const form = document.getElementById('rsvpForm');
+    const hint = document.getElementById('rsvpHint');
+    if (!form.getAttribute('action')) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Aún no está configurado el envío. Añade una URL en el atributo action="" (Formspree o Google Forms).');
+      });
+      hint.textContent = 'Configura el action="" (Formspree o Google Forms) para que el RSVP se envíe.';
+    }
+  })();
+</script>
+
+</body>
+</html>
