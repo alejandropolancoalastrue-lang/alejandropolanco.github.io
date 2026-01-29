@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pilar & Alejandro — Boda · 25 julio 2026 · Gijón</title>
   <meta name="description" content="Información de la boda: ceremonia, celebración, transporte, alojamiento y confirmación de asistencia." />
+  .heroPro{position:relative; min-height: 78vh; display:grid; align-items:center; padding: 28px 0 46px; overflow:hidden}
+.heroMedia{position:absolute; inset:0; z-index:0}
+.heroImg,.heroVideo{width:100%;height:100%;object-fit:cover;transform:scale(1.03)}
+.heroOverlay{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(900px 500px at 20% 20%, rgba(255,255,255,.65) 0%, rgba(244,241,234,.25) 45%, rgba(244,241,234,.90) 75%),
+    linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,0) 35%, rgba(0,0,0,.12));
+}
+.heroInner{position:relative; z-index:1; display:grid; grid-template-columns: 1.25fr .75fr; gap:16px; align-items:stretch}
+.heroCopy{padding:22px}
+.heroQuick{padding:18px}
+.heroQuick h3{margin:0 0 10px}
+.heroQuick ul{margin:0; padding-left:18px; color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6}
+.tag{
+  display:inline-block; padding:8px 10px; border-radius:999px;
+  border:1px solid var(--border); background:#fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size:12px; color:var(--muted); margin-bottom:10px
+}
+.ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 6px}
+.btnPrimary,.btnGhost{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:12px 14px; border-radius:14px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:650; text-decoration:none
+}
+.btnPrimary{border:1px solid rgba(43,106,115,.55); background:rgba(43,106,115,.18)}
+.btnGhost{border:1px solid var(--border); background:#fff; color:var(--muted)}
+.btnGhost:hover{color:var(--ink)}
+@media (max-width: 920px){
+  .heroInner{grid-template-columns:1fr}
+  .heroPro{min-height: auto; padding-top:18px}
+}
+
   <style>
     :root{
       --bg:#f4f1ea;
