@@ -257,51 +257,53 @@
 <main class="wrap">
 
   <!-- HOME -->
-  <section id="home" class="hero">
-    <div class="heroGrid">
-      <div class="card heroCard">
-        <div>
-          <h1>Nos casamos</h1>
-          <p class="sub">
-            Nos encantará celebrarlo contigo. Aquí tienes toda la información del fin de semana
-            (ceremonia, celebración, transporte, alojamiento y recomendaciones).
-          </p>
-          <div class="pillRow" role="list">
-            <div class="pill" role="listitem">📅 <b>25</b> julio <b>2026</b></div>
-            <div class="pill" role="listitem">📍 <b>Gijón</b></div>
-            <div class="pill" role="listitem">🕠 Ceremonia <b>17:30</b></div>
-          </div>
-        </div>
+<section id="home" class="heroPro">
+  <!-- Si NO quieres vídeo, comenta el <video> y deja solo el <img> -->
+  <div class="heroMedia" aria-hidden="true">
+    <!-- VIDEO (opcional) -->
+    <!--
+    <video class="heroVideo" autoplay muted loop playsinline preload="metadata">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    -->
+    <!-- IMAGEN fallback / alternativa -->
+    <img class="heroImg" src="assets/hero.jpg" alt="" loading="eager" />
+    <div class="heroOverlay"></div>
+  </div>
 
-        <div class="hr"></div>
+  <div class="heroInner wrap">
+    <div class="heroCopy card">
+      <div class="tag">25 julio 2026 · Gijón</div>
+      <h1>Pilar & Alejandro</h1>
+      <p class="sub">
+        Nos encantará celebrarlo contigo. Aquí tienes toda la información del fin de semana:
+        ceremonia, celebración, transporte, alojamiento y recomendaciones.
+      </p>
 
-        <div>
-          <div class="k">Organización de la boda</div>
-          <div class="v">
-            <a class="mutedLink" href="mailto:info@pilaryalejandro.es">info@pilaryalejandro.es</a><br/>
-            <a class="mutedLink" href="tel:+34692158450">+34 692 158 450</a>
-          </div>
-          <div class="note">*(Si cambias estos datos, actualízalos también en el pie de página.)*</div>
-        </div>
+      <div class="ctaRow">
+        <a class="btnPrimary" href="#rsvp">Confirmar asistencia</a>
+        <a class="btnGhost" href="#info">Ver información</a>
       </div>
 
-      <aside class="card aside" aria-label="Resumen rápido">
-        <div class="mini">
-          <h3>Ceremonia</h3>
-          <p>Iglesia de San Julián de Somió, Gijón<br><b>Sábado, 25/07/2026 · 17:30</b></p>
-        </div>
-        <div class="mini">
-          <h3>Celebración</h3>
-          <p>La Concepción, Gijón</p>
-          <p class="note"><b>Etiqueta:</b> Formal · Hombres: traje oscuro con corbata · Mujeres: largo o midi (si es sin mangas, recomendamos cubrir hombros en la misa)</p>
-        </div>
-        <div class="mini">
-          <h3>Preboda</h3>
-          <p>El viernes: fiesta preboda (detalles por WhatsApp).</p>
-        </div>
-      </aside>
+      <div class="pillRow">
+        <div class="pill">🕠 <b>17:30</b> Ceremonia</div>
+        <div class="pill">📍 <b>Somió</b></div>
+        <div class="pill">🍽️ <b>La Concepción</b></div>
+      </div>
     </div>
-  </section>
+
+    <div class="heroQuick card">
+      <h3>En resumen</h3>
+      <ul>
+        <li><b>Ceremonia:</b> Iglesia de San Julián de Somió</li>
+        <li><b>Celebración:</b> La Concepción</li>
+        <li><b>Autobuses:</b> salidas 17:00 · vueltas 12:30 / 2:00 / 3:30 / 5:00</li>
+      </ul>
+      <p class="note">💡 Consejo: reserva hotel pronto (temporada alta).</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- BODA -->
   <section id="boda">
