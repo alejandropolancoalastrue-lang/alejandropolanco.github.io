@@ -4,42 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pilar & Alejandro — Boda · 25 julio 2026 · Gijón</title>
-  <meta name="description" content="Información de la boda: ceremonia, celebración, transporte, alojamiento y confirmación de asistencia." />
+  <meta name="description" content="Información de la boda: ceremonia, celebración, transporte, alojamiento, mapa y confirmación de asistencia." />
 
-  .heroInner{grid-template-columns:1fr}
-  .heroPro{min-height: auto; padding-top:18px}
-}
-  .heroPro{position:relative; min-height: 78vh; display:grid; align-items:center; padding: 28px 0 46px; overflow:hidden}
-.heroMedia{position:absolute; inset:0; z-index:0}
-.heroImg,.heroVideo{width:100%;height:100%;object-fit:cover;transform:scale(1.03)}
-.heroOverlay{
-  position:absolute; inset:0;
-  background:
-    radial-gradient(900px 500px at 20% 20%, rgba(255,255,255,.65) 0%, rgba(244,241,234,.25) 45%, rgba(244,241,234,.90) 75%),
-    linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,0) 35%, rgba(0,0,0,.12));
-}
-.heroInner{position:relative; z-index:1; display:grid; grid-template-columns: 1.25fr .75fr; gap:16px; align-items:stretch}
-.heroCopy{padding:22px}
-.heroQuick{padding:18px}
-.heroQuick h3{margin:0 0 10px}
-.heroQuick ul{margin:0; padding-left:18px; color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6}
-.tag{
-  display:inline-block; padding:8px 10px; border-radius:999px;
-  border:1px solid var(--border); background:#fff;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size:12px; color:var(--muted); margin-bottom:10px
-}
-.ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 6px}
-.btnPrimary,.btnGhost{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:12px 14px; border-radius:14px;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight:650; text-decoration:none
-}
-.btnPrimary{border:1px solid rgba(43,106,115,.55); background:rgba(43,106,115,.18)}
-.btnGhost{border:1px solid var(--border); background:#fff; color:var(--muted)}
-.btnGhost:hover{color:var(--ink)}
-@media (max-width: 920px){
   <style>
     :root{
       --bg:#f4f1ea;
@@ -55,12 +21,42 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
       color:var(--ink);
       background: radial-gradient(1200px 700px at 50% -200px, #ffffff 0%, var(--bg) 55%);
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
     }
     a{color:inherit}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .pad{padding:18px}
+    .k{
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:13px
+    }
+    .note{
+      margin:10px 0 0;
+      font-size:13px;
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.5;
+    }
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:10px; margin:0 0 14px;
+    }
+    .sectionTitle h2{margin:0;font-size:26px;letter-spacing:-.2px}
+    .sectionTitle small{
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    /* Header */
     header{
       position:sticky; top:0; z-index:50;
       background:rgba(244,241,234,.86);
@@ -69,13 +65,11 @@
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-      gap:14px;
+      padding:12px 0; gap:14px;
     }
     .brand{
       display:flex; align-items:center; gap:12px;
       text-decoration:none;
-      min-width: 180px;
     }
     .monogram{
       width:42px;height:42px;border-radius:12px;
@@ -84,12 +78,16 @@
       background:#fff;
       box-shadow: 0 6px 18px rgba(0,0,0,.06);
       font-weight:700; letter-spacing:.5px; color:var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-    .brand strong{display:block;font-size:14px; letter-spacing:.4px}
-    .brand span{display:block;font-size:12px;color:var(--muted)}
+    .brand strong{display:block;font-size:14px; letter-spacing:.3px}
+    .brand span{
+      display:block;font-size:12px;color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
     nav{
-      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       font-size:13px;
     }
     nav a{
@@ -100,42 +98,54 @@
       color:var(--muted);
     }
     nav a:hover{border-color:var(--border); background:#fff; color:var(--ink)}
-    .hero{
-      padding:56px 0 18px;
+
+    /* Buttons */
+    .btnPrimary,.btnGhost,.btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:14px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight:650; text-decoration:none;
+      cursor:pointer;
     }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
-      align-items:stretch;
+    .btnPrimary{border:1px solid rgba(43,106,115,.55); background:rgba(43,106,115,.18)}
+    .btnGhost{border:1px solid var(--border); background:#fff; color:var(--muted)}
+    .btnGhost:hover{color:var(--ink)}
+    .btn{
+      border:1px solid rgba(43,106,115,.35);
+      background: linear-gradient(180deg, rgba(43,106,115,.18), rgba(43,106,115,.10));
     }
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+
+    /* Hero Pro */
+    .heroPro{position:relative; min-height: 78vh; display:grid; align-items:center; padding: 26px 0 44px; overflow:hidden}
+    .heroMedia{position:absolute; inset:0; z-index:0}
+    .heroImg,.heroVideo{width:100%;height:100%;object-fit:cover;transform:scale(1.03)}
+    .heroOverlay{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 500px at 20% 20%, rgba(255,255,255,.65) 0%, rgba(244,241,234,.25) 45%, rgba(244,241,234,.90) 75%),
+        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,0) 35%, rgba(0,0,0,.12));
     }
-    .heroCard{
-      padding:28px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap:18px;
+    .heroInner{position:relative; z-index:1; display:grid; grid-template-columns: 1.25fr .75fr; gap:16px; align-items:stretch}
+    .heroCopy{padding:22px}
+    .heroCopy h1{
+      margin:8px 0 0;
+      font-size:48px; line-height:1.02; letter-spacing:-.6px;
     }
-    h1{
-      margin:0;
-      font-size:42px;
-      line-height:1.05;
-      letter-spacing:-.5px;
-    }
-    .sub{
+    .heroCopy .sub{
       margin:10px 0 0;
       color:var(--muted);
       font-size:16px;
-      line-height:1.5;
+      line-height:1.55;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-    .pillRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .tag{
+      display:inline-block; padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border); background:#fff;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size:12px; color:var(--muted);
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 6px}
+    .pillRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
     .pill{
       display:inline-flex; gap:8px; align-items:center;
       padding:10px 12px; border-radius:999px;
@@ -145,50 +155,32 @@
       font-size:13px;
       color:var(--muted);
     }
-    .pill b{color:var(--ink); font-weight:600}
-    .aside{
-      padding:18px;
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .aside .mini{
-      padding:16px;
-      border-radius:16px;
-      border:1px dashed rgba(43,106,115,.35);
-      background:linear-gradient(180deg, rgba(43,106,115,.08), rgba(255,255,255,.7));
-    }
-    .aside h3{margin:0 0 6px;font-size:16px}
-    .aside p{margin:0;color:var(--muted);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size:13px; line-height:1.45}
-    section{padding:34px 0}
-    .sectionTitle{
-      display:flex; align-items:baseline; justify-content:space-between;
-      gap:10px; margin-bottom:14px;
-    }
-    .sectionTitle h2{
-      margin:0; font-size:26px;
-      letter-spacing:-.2px;
-    }
-    .sectionTitle small{
+    .pill b{color:var(--ink); font-weight:650}
+    .heroQuick{padding:18px}
+    .heroQuick h3{margin:0 0 10px;font-size:16px}
+    .heroQuick ul{
+      margin:0; padding-left:18px;
       color:var(--muted);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6
     }
+
+    /* Sections spacing */
+    section{padding:34px 0}
+
+    /* Feature blocks (image + text) */
+    .feature{display:grid; grid-template-columns:1.1fr .9fr; gap:16px; align-items:stretch; margin-top:14px}
+    .featureMedia{border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); background:#fff}
+    .featureMedia img{width:100%;height:100%;object-fit:cover; display:block; min-height:320px}
+    .featureCard{padding:18px}
+    .feature.reverse{grid-template-columns:.9fr 1.1fr}
+    .feature.reverse .featureMedia{order:2}
+
+    /* Simple grids */
     .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
     .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .pad{padding:18px}
-    .k{color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size:13px}
-    .v{margin:6px 0 0; font-size:16px; line-height:1.4}
-    .list{
-      margin:10px 0 0;
-      padding:0 0 0 18px;
-      color:var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.55;
-    }
-    .note{
-      margin-top:10px;
-      font-size:13px;
-      color:var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    }
+
+    /* Details (accordion) */
     details{
       border:1px solid var(--border);
       border-radius:16px;
@@ -202,15 +194,31 @@
       padding:14px 16px;
       list-style:none;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-weight:600;
+      font-weight:650;
     }
     summary::-webkit-details-marker{display:none}
     .detailsBody{padding:0 16px 16px}
-    .formGrid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
+
+    /* Gallery + lightbox */
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .gallery img{
+      width:100%; height:220px; object-fit:cover; border-radius:16px;
+      border:1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(0,0,0,.06);
+      cursor:pointer;
     }
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.72); display:none; place-items:center; z-index:999}
+    .lightbox img{max-width:min(1100px,92vw); max-height:86vh; border-radius:18px; border:1px solid rgba(255,255,255,.15)}
+    .lightboxClose{
+      position:absolute; top:18px; right:18px;
+      padding:10px 12px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.25);
+      background:rgba(0,0,0,.3); color:#fff; cursor:pointer
+    }
+    .lightbox.show{display:grid}
+
+    /* RSVP form */
+    .formGrid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
     label{
       display:block;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -225,19 +233,26 @@
       border-radius:12px;
       font: inherit;
       background:#fff;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
     textarea{min-height:110px; resize:vertical}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
+
+    /* Floating RSVP button */
+    .floatRsvp{
+      position:fixed;
+      right:16px; bottom:16px;
+      z-index:80;
+      box-shadow: 0 16px 40px rgba(0,0,0,.18);
+      border-radius:999px;
       padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(43,106,115,.35);
-      background: linear-gradient(180deg, rgba(43,106,115,.18), rgba(43,106,115,.10));
-      cursor:pointer;
+      border:1px solid rgba(43,106,115,.45);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-weight:650;
+      font-weight:750;
+      text-decoration:none;
     }
-    .btn:hover{filter:saturate(1.1)}
+
     footer{
       margin-top:26px;
       border-top:1px solid var(--border);
@@ -247,23 +262,27 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       font-size:13px;
     }
-    .footerRow{
-      display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap;
-      align-items:center;
-    }
+    .footerRow{display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap; align-items:center}
     .mutedLink{color:inherit; text-decoration:underline dotted rgba(0,0,0,.2)}
     .hr{height:1px;background:var(--border);margin:12px 0}
+
     @media (max-width: 920px){
-      .heroGrid{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-      .formGrid{grid-template-columns:1fr}
-      h1{font-size:36px}
+      .heroInner{grid-template-columns:1fr}
+      .heroPro{min-height: auto; padding-top:18px}
+      .heroCopy h1{font-size:40px}
       nav{justify-content:flex-start}
-      .brand{min-width:auto}
+      .feature,.feature.reverse{grid-template-columns:1fr}
+      .feature.reverse .featureMedia{order:0}
+      .featureMedia img{min-height:220px}
+      .grid2{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .gallery img{height:180px}
+      .formGrid{grid-template-columns:1fr}
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -279,29 +298,28 @@
 
       <nav aria-label="Navegación principal">
         <a href="#home">Home</a>
-        <a href="#boda">Boda</a>
-        <a href="#info">Información</a>
-        <a href="#asturias">Asturias</a>
-        <a href="#rsvp">Confirmación</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#info">Info</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#rsvp">RSVP</a>
         <a href="#lista">Lista</a>
       </nav>
     </div>
   </div>
 </header>
 
-<main class="wrap">
+<a class="floatRsvp" href="#rsvp">✅ Confirmar asistencia</a>
 
-  <!-- HOME -->
+<!-- HERO -->
 <section id="home" class="heroPro">
-  <!-- Si NO quieres vídeo, comenta el <video> y deja solo el <img> -->
   <div class="heroMedia" aria-hidden="true">
-    <!-- VIDEO (opcional) -->
+    <!-- VIDEO (opcional): sube assets/hero.mp4 y descomenta este bloque -->
     <!--
     <video class="heroVideo" autoplay muted loop playsinline preload="metadata">
       <source src="assets/hero.mp4" type="video/mp4">
     </video>
     -->
-    <!-- IMAGEN fallback / alternativa -->
     <img class="heroImg" src="assets/hero.jpg" alt="" loading="eager" />
     <div class="heroOverlay"></div>
   </div>
@@ -320,10 +338,18 @@
         <a class="btnGhost" href="#info">Ver información</a>
       </div>
 
-      <div class="pillRow">
-        <div class="pill">🕠 <b>17:30</b> Ceremonia</div>
-        <div class="pill">📍 <b>Somió</b></div>
-        <div class="pill">🍽️ <b>La Concepción</b></div>
+      <div class="pillRow" role="list">
+        <div class="pill" role="listitem">🕠 <b>17:30</b> Ceremonia</div>
+        <div class="pill" role="listitem">📍 <b>Somió</b></div>
+        <div class="pill" role="listitem">🍽️ <b>La Concepción</b></div>
+      </div>
+
+      <div class="hr"></div>
+
+      <div class="k">Organización de la boda</div>
+      <div class="note" style="margin-top:6px">
+        <a class="mutedLink" href="mailto:info@pilaryalejandro.es">info@pilaryalejandro.es</a> ·
+        <a class="mutedLink" href="tel:+34692158450">+34 692 158 450</a>
       </div>
     </div>
 
@@ -339,30 +365,39 @@
   </div>
 </section>
 
+<main class="wrap">
 
-  <!-- BODA -->
-  <section id="boda">
+  <!-- LUGARES (bloques con imagen) -->
+  <section id="lugares">
     <div class="sectionTitle">
-      <h2>Boda</h2>
-      <small>Horarios y lugares</small>
+      <h2>Lugares</h2>
+      <small>Ceremonia y celebración</small>
     </div>
 
-    <div class="grid2">
-      <div class="card pad">
-        <div class="k">Ceremonia</div>
-        <div class="v"><b>Iglesia de San Julián de Somió, Gijón</b></div>
-        <div class="note">Sábado, 25 de julio de 2026 a las 17:30</div>
+    <div class="feature">
+      <div class="featureMedia">
+        <img src="assets/ceremony.jpg" alt="Iglesia de San Julián de Somió" loading="lazy">
       </div>
+      <div class="featureCard card">
+        <div class="k">Ceremonia</div>
+        <h3 style="margin:8px 0 4px">Iglesia de San Julián de Somió</h3>
+        <p class="note"><b>Sábado, 25/07/2026 · 17:30</b></p>
+        <p class="note">Recomendación: llegar con 10–15 minutos de margen.</p>
+        <a class="btnGhost" href="#mapa">Ver mapa</a>
+      </div>
+    </div>
 
-      <div class="card pad">
+    <div class="feature reverse">
+      <div class="featureMedia">
+        <img src="assets/party.jpg" alt="La Concepción" loading="lazy">
+      </div>
+      <div class="featureCard card">
         <div class="k">Celebración</div>
-        <div class="v"><b>La Concepción, Gijón</b></div>
-        <div class="note">
-          <b>Etiqueta:</b> Formal<br>
-          <b>Hombres:</b> Traje oscuro con corbata<br>
-          <b>Mujeres:</b> Traje largo o midi<br>
-          <em>Si el traje no tiene mangas, recomendamos llevar una prenda que cubra los hombros para la misa.</em>
-        </div>
+        <h3 style="margin:8px 0 4px">La Concepción</h3>
+        <p class="note">
+          <b>Etiqueta:</b> Formal · Hombres: traje oscuro con corbata · Mujeres: largo o midi
+          <br><em>Si el traje no tiene mangas, recomendamos cubrir hombros para la misa.</em>
+        </p>
       </div>
     </div>
 
@@ -370,12 +405,14 @@
 
     <div class="card pad">
       <div class="k">Preboda</div>
-      <div class="v">El viernes organizaremos una fiesta preboda pensada especialmente para los invitados más jóvenes.</div>
-      <div class="note">Más adelante compartiremos los detalles a través de WhatsApp.</div>
+      <p class="note" style="margin-top:6px">
+        El viernes organizaremos una fiesta preboda pensada especialmente para los invitados más jóvenes.
+        Compartiremos detalles por WhatsApp.
+      </p>
     </div>
   </section>
 
-  <!-- INFORMACIÓN -->
+  <!-- INFO (acordeones) -->
   <section id="info">
     <div class="sectionTitle">
       <h2>Información</h2>
@@ -393,17 +430,17 @@
         <div class="grid3">
           <div class="card pad" style="box-shadow:none">
             <div class="k">Hotel NH</div>
-            <div class="v">Precio: <b>210€ / noche</b></div>
+            <div class="note" style="margin-top:6px"><b>210€ / noche</b></div>
             <div class="note">Reservas: <a class="mutedLink" href="mailto:nhgijon@nh-hotels.com">nhgijon@nh-hotels.com</a></div>
           </div>
           <div class="card pad" style="box-shadow:none">
             <div class="k">Hotel ABBA</div>
-            <div class="v">Código: <b>PILALE26</b></div>
+            <div class="note" style="margin-top:6px">Código: <b>PILALE26</b></div>
             <div class="note">Descuento: <b>15%</b> (reservas vía web del hotel)</div>
           </div>
           <div class="card pad" style="box-shadow:none">
             <div class="k">Hotel Zentro Rey Pelayo</div>
-            <div class="v">Código: <b>BODA PIAL2026</b></div>
+            <div class="note" style="margin-top:6px">Código: <b>BODA PIAL2026</b></div>
             <div class="note">Reservas vía web del hotel</div>
           </div>
         </div>
@@ -411,29 +448,16 @@
         <div class="hr"></div>
 
         <div class="k">Otros hoteles (sin tarifa negociada)</div>
-        <ul class="list">
-          <li>Hotel Moderne</li>
-          <li>Hotel ARTIEM</li>
-          <li>Blue Hoteles</li>
-          <li>Hotel Príncipe de Asturias</li>
-        </ul>
+        <p class="note">Hotel Moderne · Hotel ARTIEM · Blue Hoteles · Hotel Príncipe de Asturias</p>
       </div>
     </details>
 
     <details>
       <summary>💇 Peluquería (recomendaciones)</summary>
       <div class="detailsBody">
-        <ul class="list">
-          <li>Alonsos</li>
-          <li>Llongueras</li>
-          <li>Suárez</li>
-          <li>Jana Tagarro</li>
-          <li>La Salá</li>
-          <li>La Mona Riza</li>
-          <li>Coco y Limón</li>
-          <li>Patricia Solar</li>
-          <li>Gerclem</li>
-        </ul>
+        <p class="note">
+          Alonsos · Llongueras · Suárez · Jana Tagarro · La Salá · La Mona Riza · Coco y Limón · Patricia Solar · Gerclem
+        </p>
       </div>
     </details>
 
@@ -441,99 +465,69 @@
       <summary>🚌 Transporte (autobuses)</summary>
       <div class="detailsBody">
         <div class="k">Puntos de recogida (día de la boda)</div>
-        <ul class="list">
-          <li>Hotel NH / ABBA: <b>17:00</b></li>
-          <li>Puerto deportivo de Gijón: <b>17:00</b></li>
-          <li>Parador de Gijón: <b>17:00</b></li>
-        </ul>
-        <p class="note"><b>Rogamos puntualidad.</b></p>
+        <p class="note">
+          Hotel NH / ABBA: <b>17:00</b> · Puerto deportivo de Gijón: <b>17:00</b> · Parador de Gijón: <b>17:00</b><br>
+          <b>Rogamos puntualidad.</b>
+        </p>
 
-        <div class="k">Regresos desde La Concepción</div>
-        <ul class="list">
-          <li><b>12:30</b></li>
-          <li><b>2:00</b></li>
-          <li><b>3:30</b></li>
-          <li><b>5:00</b> (fin de fiesta)</li>
-        </ul>
+        <div class="k" style="margin-top:12px">Regresos desde La Concepción</div>
+        <p class="note">
+          <b>12:30</b> · <b>2:00</b> · <b>3:30</b> · <b>5:00</b> (fin de fiesta)
+        </p>
       </div>
     </details>
 
     <details>
       <summary>🧸 Babysitting</summary>
       <div class="detailsBody">
-        <p class="note">
-          Para quienes viajéis a Gijón con niños, recomendamos una empresa especializada:
-        </p>
-        <div class="card pad" style="box-shadow:none">
-          <div class="k">Empresa</div>
-          <div class="v"><b>Sueños de Papel</b></div>
-        </div>
+        <p class="note">Recomendamos la empresa especializada <b>Sueños de Papel</b>.</p>
       </div>
     </details>
-
   </section>
 
-  <!-- ASTURIAS -->
-  <section id="asturias">
+  <!-- MAPA -->
+  <section id="mapa">
     <div class="sectionTitle">
-      <h2>Asturias</h2>
-      <small>Recomendaciones</small>
+      <h2>Mapa</h2>
+      <small>Ceremonia, celebración y hoteles</small>
     </div>
-
-    <div class="grid2">
-      <div class="card pad">
-        <div class="k">Gijón — Dónde comer (restaurantes formales)</div>
-        <ul class="list">
-          <li>La Pondala (roast beef / arroz con almejas / arroz con pollo)</li>
-          <li>Casa Zabala</li>
-          <li>Auga</li>
-          <li>El Recetario</li>
-          <li>Sancho (mollejas)</li>
-          <li>Gloria (arroz con pitu de caleya)</li>
-          <li>Viñao</li>
-          <li>Farragua</li>
-        </ul>
-      </div>
-
-      <div class="card pad">
-        <div class="k">Asturias — Dónde comer</div>
-        <ul class="list">
-          <li><b>Con estrella Michelin:</b>
-            <ul class="list">
-              <li>Casa Marcial (Arriondas)</li>
-              <li>Casa Gerardo (Prendes) — fabada</li>
-              <li>Balneario de Salinas (Salinas)</li>
-            </ul>
-          </li>
-          <li><b>Otros:</b>
-            <ul class="list">
-              <li>Gueyu Mar (Ribadesella)</li>
-              <li>La Huertona (Ribadesella)</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div style="height:12px"></div>
 
     <div class="card pad">
-      <div class="k">Mapa</div>
-      <p class="note">
-        Si quieres “clavar” el mapa con marcadores como en el ejemplo, lo más fácil es:
-        crear un mapa en Google My Maps y pegar aquí el iframe de “Compartir → Insertar en mi sitio”.
+      <p class="note" style="margin-top:0">
+        📍 Pega aquí el mapa interactivo: Google Maps → “Compartir” → “Insertar un mapa” → copia el <b>src</b> del iframe.
       </p>
 
-      <!-- Sustituye el src por tu mapa embebido -->
+      <!-- IMPORTANTE: pega aquí el SRC del iframe de Google Maps -->
       <iframe
-        title="Mapa"
+        title="Mapa de la boda"
         src=""
-        style="width:100%;height:360px;border:1px solid var(--border);border-radius:16px;background:#fff"
+        style="width:100%;height:420px;border:0;border-radius:16px;background:#fff"
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-      <p class="note">*(Ahora mismo el iframe está vacío a propósito. Pega tu enlace y listo.)*</p>
+      <p class="note">Si lo dejas vacío, no mostrará mapa (normal).</p>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <div class="sectionTitle">
+      <h2>Galería</h2>
+      <small>Algunas fotos nuestras</small>
+    </div>
+
+    <div class="gallery">
+      <img src="assets/gallery-1.jpg" alt="Foto 1" loading="lazy">
+      <img src="assets/gallery-2.jpg" alt="Foto 2" loading="lazy">
+      <img src="assets/gallery-3.jpg" alt="Foto 3" loading="lazy">
+      <img src="assets/gallery-4.jpg" alt="Foto 4" loading="lazy">
+      <img src="assets/gallery-5.jpg" alt="Foto 5" loading="lazy">
+      <img src="assets/gallery-6.jpg" alt="Foto 6" loading="lazy">
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightboxClose" aria-label="Cerrar">✕</button>
+      <img id="lightboxImg" alt="">
     </div>
   </section>
 
@@ -545,13 +539,11 @@
     </div>
 
     <div class="card pad">
-      <p class="note">
-        Este formulario funciona sin servidor si lo conectas a un servicio gratuito tipo <b>Formspree</b> o si lo sustituyes por un Google Form.
-        Aquí lo dejo preparado para Formspree (solo cambia el <code>action</code>).
+      <p class="note" style="margin-top:0">
+        Este formulario funciona si conectas <b>Formspree</b> (gratis) o sustituyes por Google Forms.
+        En Formspree te darán una URL: pégala en el atributo <code>action</code>.
       </p>
 
-      <!-- 1) Crea un form en https://formspree.io (gratis) -->
-      <!-- 2) Te dan una URL y la pegas en action="" -->
       <form id="rsvpForm" method="POST" action="">
         <div class="formGrid">
           <div>
@@ -605,7 +597,7 @@
 
         <div style="margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
           <button class="btn" type="submit">Enviar</button>
-          <span class="note" id="rsvpHint">Si no configuras el <code>action</code>, no enviará nada.</span>
+          <span class="note" id="rsvpHint">Configura <code>action</code> para enviar.</span>
         </div>
       </form>
     </div>
@@ -619,19 +611,17 @@
     </div>
 
     <div class="card pad">
-      <p class="note">Si deseáis tener un detalle con nosotros, aquí os dejamos algunas opciones. ¡Muchas gracias!</p>
+      <p class="note" style="margin-top:0">Si deseáis tener un detalle con nosotros, aquí os dejamos algunas opciones. ¡Muchas gracias!</p>
 
       <div class="grid2">
         <div class="card pad" style="box-shadow:none">
           <div class="k">Lista de bodas</div>
-          <div class="v"><b>El Corte Inglés</b></div>
-          <p class="note">Puedes añadir aquí un enlace directo a la lista.</p>
+          <p class="note"><b>El Corte Inglés</b> (añade aquí el enlace a la lista)</p>
         </div>
 
         <div class="card pad" style="box-shadow:none">
           <div class="k">Número de cuenta</div>
-          <div class="v"><b>ES00 0000 0000 0000 0000 0000</b></div>
-          <p class="note">*(Sustituye por el número real.)*</p>
+          <p class="note"><b>ES00 0000 0000 0000 0000 0000</b> (sustituye por el real)</p>
         </div>
       </div>
     </div>
@@ -653,16 +643,42 @@
 </footer>
 
 <script>
-  // Aviso amistoso si no has configurado Formspree / action
+  // Lightbox simple para la galería
+  (function(){
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lightboxImg');
+    const close = document.querySelector('.lightboxClose');
+    const thumbs = document.querySelectorAll('.gallery img');
+    if(!lb || !img || !close || !thumbs.length) return;
+
+    thumbs.forEach(t => t.addEventListener('click', () => {
+      img.src = t.src;
+      img.alt = t.alt || '';
+      lb.classList.add('show');
+      lb.setAttribute('aria-hidden','false');
+    }));
+
+    function hide(){
+      lb.classList.remove('show');
+      lb.setAttribute('aria-hidden','true');
+      img.src = '';
+    }
+    close.addEventListener('click', hide);
+    lb.addEventListener('click', (e) => { if(e.target === lb) hide(); });
+    window.addEventListener('keydown', (e) => { if(e.key === 'Escape') hide(); });
+  })();
+
+  // Aviso si no has configurado Formspree / action
   (function(){
     const form = document.getElementById('rsvpForm');
     const hint = document.getElementById('rsvpHint');
+    if (!form) return;
     if (!form.getAttribute('action')) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Aún no está configurado el envío. Añade una URL en el atributo action="" (Formspree o Google Forms).');
+        alert('Aún no está configurado el envío. Añade una URL en action="" (Formspree o Google Forms).');
       });
-      hint.textContent = 'Configura el action="" (Formspree o Google Forms) para que el RSVP se envíe.';
+      if (hint) hint.textContent = 'Configura el action="" (Formspree o Google Forms) para que el RSVP se envíe.';
     }
   })();
 </script>
